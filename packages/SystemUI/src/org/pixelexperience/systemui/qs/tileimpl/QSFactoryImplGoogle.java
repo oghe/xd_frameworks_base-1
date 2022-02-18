@@ -54,6 +54,9 @@ import com.android.systemui.qs.tiles.AmbientDisplayTile;
 import com.android.systemui.qs.tiles.AODTile;
 import com.android.systemui.qs.tiles.UsbTetherTile;
 import com.android.systemui.qs.tiles.HeadsUpTile;
+import com.android.systemui.qs.tiles.DataSwitchTile;
+import com.android.systemui.qs.tiles.CPUInfoTile;
+import com.android.systemui.qs.tiles.FPSInfoTile;
 
 import org.pixelexperience.systemui.qs.tiles.BatterySaverTileGoogle;
 import org.pixelexperience.systemui.qs.tiles.ReverseChargingTile;
@@ -105,7 +108,11 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<AmbientDisplayTile> ambientDisplayTileProvider,
             Provider<AODTile> aodTileProvider,
             Provider<UsbTetherTile> usbTetherTileProvider,
-            Provider<HeadsUpTile> headsUpTileProvider) {
+            Provider<HeadsUpTile> headsUpTileProvider,
+            Provider<DataSwitchTile> dataSwitchTileProvider,
+            Provider<CPUInfoTile> cpuInfoTileProvider,
+            Provider<FPSInfoTile> fpsInfoTileProvider) {
+
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -140,7 +147,11 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 ambientDisplayTileProvider,
                 aodTileProvider,
                 usbTetherTileProvider,
-                headsUpTileProvider);
+                headsUpTileProvider,
+                dataSwitchTileProvider,
+                cpuInfoTileProvider,
+                fpsInfoTileProvider);
+
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
