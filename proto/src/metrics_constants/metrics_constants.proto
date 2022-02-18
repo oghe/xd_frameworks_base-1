@@ -7439,5 +7439,6 @@ message MetricsEvent {
     // xdoss constant
     XD_SETTINGS = 1999;
 
+    XD_TILE = 2000;
   }
 }
