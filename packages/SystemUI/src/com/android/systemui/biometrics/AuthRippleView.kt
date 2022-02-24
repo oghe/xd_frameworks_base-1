@@ -252,7 +252,6 @@ class AuthRippleView(context: Context?, attrs: AttributeSet?) : View(context, at
         if (unlockedRippleInProgress) {
             return // Ignore if ripple effect is already playing
         }
-
         var rippleStart = 0f
         var alphaDuration = alphaInDuration
         if (dwellPulseOutAnimator?.isRunning == true || retractAnimator?.isRunning == true) {
